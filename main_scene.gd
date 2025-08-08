@@ -42,11 +42,15 @@ func send_image(image:PackedByteArray,sender_name:String):
 	var img:=Image.new()
 	if img.load_png_from_buffer(image)!=OK:
 		var tex:=ImageTexture.create_from_image(img)
+		texture_rect.texture=null
+		texture_rect.size=Vector2.ZERO
 		texture_rect.texture=tex
 		texture_size_change(tex.get_size())
 
 	elif img.load_jpg_from_buffer(image)!=OK:
 		var tex:=ImageTexture.create_from_image(img)
+		texture_rect.texture=null
+		texture_rect.size=Vector2.ZERO
 		texture_rect.texture=tex
 		texture_size_change(tex.get_size())
 

@@ -54,6 +54,7 @@ grow_horizontal = 2
 layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainerImage"]
+custom_minimum_size = Vector2(300, 225)
 layout_mode = 2
 expand_mode = 1
 

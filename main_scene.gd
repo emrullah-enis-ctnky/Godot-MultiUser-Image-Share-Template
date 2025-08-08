@@ -10,6 +10,13 @@ func _ready() -> void:
 	file_dialog_instance=FILE_DIALOG.instantiate()
 	add_child(file_dialog_instance)
 	file_dialog_instance.file_chosen.connect(on_file_chosen)
+	texture_rect.custom_minimum_size=Vector2(200,150)
+	
+	
+func texture_size_change():
+	if texture_rect.size.x > 800 or texture_rect.size.y > 600:
+		texture_rect.size.x = min(texture_rect.size.x, 800)
+		texture_rect.size.y = min(texture_rect.size.y, 600)
 func _on_host_button_pressed() -> void:
 	peer.create_server(1500)
 	multiplayer.multiplayer_peer=peer
@@ -34,7 +41,7 @@ func send_image(image:PackedByteArray,sender_name:String):
 	elif img.load_jpg_from_buffer(image)!=OK:
 		var tex:=ImageTexture.create_from_image(img)
 		texture_rect.texture=tex
-	
+	texture_size_change()
 func _on_send_button_pressed() -> void:
 	file_dialog_instance.popup_centered()
 func on_file_chosen(path):

@@ -3,4 +3,9 @@
 [ext_resource type="Script" uid="uid://dg4ryg4d6xbid" path="res://file_dialog.gd" id="1_btqv8"]
 
 [node name="FileDialog" type="FileDialog"]
+title = "Open a File"
+ok_button_text = "Open"
+dialog_hide_on_ok = true
+file_mode = 0
+access = 2
 script = ExtResource("1_btqv8")

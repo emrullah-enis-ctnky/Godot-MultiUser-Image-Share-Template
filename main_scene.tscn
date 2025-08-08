@@ -55,6 +55,7 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainerImage"]
 layout_mode = 2
+expand_mode = 1
 
 [connection signal="pressed" from="CanvasLayer/sendButton" to="." method="_on_send_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/hostButton" to="." method="_on_host_button_pressed"]

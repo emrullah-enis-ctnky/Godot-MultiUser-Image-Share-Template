@@ -1,5 +1,6 @@
 # 🖼️ Godot Image Sharing Network
 
+![Example](image.png)
 [![Godot Engine](https://img.shields.io/badge/Godot-4.0+-blue.svg)](https://godotengine.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
@@ -144,6 +145,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 # 🖼️ Godot Resim Paylaşım Ağı
+
+![Example](image.png)
+[![Godot Engine](https://img.shields.io/badge/Godot-4.0+-blue.svg)](https://godotengine.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 Godot Engine ile geliştirilmiş gerçek zamanlı resim paylaşım uygulaması. Kullanıcılar oturum başlatabilir veya katılabilir ve ağ üzerinden anında resim paylaşabilir.
 

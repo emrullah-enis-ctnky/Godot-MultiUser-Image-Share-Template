@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=3 uid="uid://bb41rve6oiiy1"]
+
+[ext_resource type="Script" uid="uid://bwvknru8yy6ae" path="res://main_scene.gd" id="1_0f027"]
+
+[node name="MainScene" type="Node2D"]
+script = ExtResource("1_0f027")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="sendButton" type="Button" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -66.5
+offset_top = -31.0
+offset_right = 66.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "SEND AN IMAGE"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.5
+offset_top = -33.0
+offset_right = 25.5
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="hostButton" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "HOST"
+
+[node name="clientButton" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "JOIN"
+
+[node name="VBoxContainerImage" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainerImage"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainerImage"]
+layout_mode = 2
+
+[connection signal="pressed" from="CanvasLayer/sendButton" to="." method="_on_send_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/hostButton" to="." method="_on_host_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/clientButton" to="." method="_on_client_button_pressed"]

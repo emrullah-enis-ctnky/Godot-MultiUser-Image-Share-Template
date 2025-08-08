@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dokpn01jrw2r7"]
+
+[ext_resource type="Script" uid="uid://dg4ryg4d6xbid" path="res://file_dialog.gd" id="1_btqv8"]
+
+[node name="FileDialog" type="FileDialog"]
+script = ExtResource("1_btqv8")
